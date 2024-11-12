@@ -9,7 +9,7 @@
   height: auto;
   width: 100%;
   color: aliceblue;
-
+  padding: 10px;
 }
 
 .App-Name{
@@ -31,4 +31,17 @@
   padding: 0;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+.App-Header-List li a{
+  text-decoration: none;
+  color: aliceblue;
+  padding: 5px;
+}
+
+.App-Header-List li a:hover{
+  color:#346aff;
+  background-color: aliceblue;
+  border-radius: 5px;
+  transition-duration: 1s;
 }
