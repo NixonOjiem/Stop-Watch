@@ -2,7 +2,14 @@ import React from 'react'
 
 function Clock() {
   return (
-    <div>Clock</div>
+    <div className='Clock-Tile'>
+        <div class="card">
+            
+    </div>
+   
+   
+  </div>
+
   )
 }
 

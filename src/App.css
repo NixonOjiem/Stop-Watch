@@ -45,3 +45,22 @@
   border-radius: 5px;
   transition-duration: 1s;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 350px;
+  background: linear-gradient(#2b241a, #171615);
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),
+              0px 10px 14px 1px rgba(0, 0, 0, 0.14),
+              0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+}
+
+
