@@ -14,7 +14,7 @@ function Clock() {
 
   return (
     <div className='Clock-Tile'>
-        <div class="card">
+        <div className="card">
             <h4>Current Time</h4> <br />
             <h1>{time.toLocaleTimeString()}</h1>
         </div>
