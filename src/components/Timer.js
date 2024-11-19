@@ -38,7 +38,8 @@ const Timer = () => {
 
   return (
     <div className='card'>
-      <h1>Timer: {formatTime(time)}</h1>
+      <h1>Timer</h1>
+      <h1>{formatTime(time)}</h1>
       <div className='button-holder'>
       <button onClick={startTimer} className='button'>Start</button>
       <button onClick={stopTimer} className='button'>Stop</button>

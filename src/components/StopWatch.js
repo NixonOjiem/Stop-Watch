@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react';
 
 function StopWatch() {
-
-  const [time, setTime] = useState(300) //300 seconds = 5 mins
+  const [time, setTime] = useState(300); // 300 seconds = 5 mins
   const [isActive, setIsActive] = useState(false);
+  const [inputTime, setInputTime] = useState(5); // default input time in minutes
 
   useEffect(() => {
     let interval = null;
@@ -19,26 +19,38 @@ function StopWatch() {
 
   const startTimer = () => {
     setIsActive(true);
-  }
+  };
 
   const resetTimer = () => {
     setIsActive(false);
-    setTime(300);
+    setTime(inputTime * 60); // set time based on user input
+  };
+
+  const handleInputChange = (e) => {
+    setInputTime(e.target.value);
   };
 
   return (
     <div className='card'>
-      <div className='Stopwatch-holder'>
-        <h1>Stopwatch: <span>{Math.floor(time/60)}:</span></h1>
-        <h1><span>{time % 60 < 10 ? `0${time % 60}`: time % 60}</span></h1>
+      <h1>Stopwatch</h1>
+      <div>
+        <h1>{Math.floor(time / 60)}:
+        {time % 60 < 10 ? `0${time % 60}` : time % 60}</h1>
       </div>
-      
-      <div className='button-holder'>
+      <div>
+        <input
+          type="number"
+          value={inputTime}
+          onChange={handleInputChange}
+          placeholder="Enter time in minutes"
+        />
+      </div>
+      <div>
         <button onClick={startTimer}className='button'>Start</button>
-        <button onClick={resetTimer} className='button'>Reset</button>
+        <button onClick={resetTimer}className='button'>Reset</button>
       </div>
     </div>
-  )
+  );
 }
 
-export default StopWatch
+export default StopWatch;
