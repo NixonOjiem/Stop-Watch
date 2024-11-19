@@ -30,12 +30,20 @@ function StopWatch() {
     setInputTime(e.target.value);
   };
 
+  // Calculate hours, minutes, and seconds
+  const hours = Math.floor(time / 3600);
+  const minutes = Math.floor((time % 3600) / 60);
+  const seconds = time % 60;
+
   return (
     <div className='card'>
       <h1>Stopwatch</h1>
       <div>
-        <h1>{Math.floor(time / 60)}:
-        {time % 60 < 10 ? `0${time % 60}` : time % 60}</h1>
+        <h1>
+          {hours > 0 ? `${hours}:` : ''} {/* Only show hours if greater than 0 */}
+          {minutes < 10 ? `0${minutes}` : minutes}:
+          {seconds < 10 ? `0${seconds}` : seconds}
+        </h1>
       </div>
       <div>
         <input
@@ -46,8 +54,8 @@ function StopWatch() {
         />
       </div>
       <div>
-        <button onClick={startTimer}className='button'>Start</button>
-        <button onClick={resetTimer}className='button'>Reset</button>
+        <button onClick={startTimer} className='button'>Start</button>
+        <button onClick={resetTimer} className='button'>Reset</button>
       </div>
     </div>
   );
