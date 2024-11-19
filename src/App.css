@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  /* overflow-x: hidden; */
 }
 
 .App-Header{
@@ -87,6 +88,11 @@
 }
 
 .button-holder{
+  display: flex;
+  flex-direction: row;
+}
+
+.Stopwatch-holder{
   display: flex;
   flex-direction: row;
 }
