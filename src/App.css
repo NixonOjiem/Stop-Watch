@@ -97,3 +97,43 @@
   flex-direction: row;
 }
 
+/* Input text field */
+.Input-field{
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.Input-field::placeholder{
+  /* color: transparent; */
+  color: #eff6f2;
+  font-size: 12px;
+  text-align: center;
+}
+
+.Input-field:focus{
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #1983e7, #eff6f2);
+  border-image-slice: 1;
+}
+
+/* Hide the spinners in Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide the spinners in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

@@ -48,9 +48,10 @@ function StopWatch() {
       <div>
         <input
           type="number"
-          value={inputTime}
+          // value={inputTime}
           onChange={handleInputChange}
           placeholder="Enter time in minutes"
+          className='Input-field'
         />
       </div>
       <div>
